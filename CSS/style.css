@@ -12,6 +12,11 @@ body {
           box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+@media (min-width: 769px) {
+  body {
+    max-width: 1440px;
+  }
+}
 
 a {
   color: inherit;
@@ -19,6 +24,7 @@ a {
 }
 
 .titre {
+  padding: 10px;
   font-size: 24px;
 }
 .titre--h1 {
@@ -57,6 +63,7 @@ a {
 }
 .card__fonctionnement {
   padding: 5px;
+  margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,11 +71,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-}
-@media (min-width: 769px) {
-  .card__fonctionnement {
-    width: 30%;
-  }
 }
 .card__fonctionnement--p {
   text-align: center;
@@ -81,13 +83,18 @@ a {
   right: 15px;
 }
 .card__fonctionnement--h3 {
-  margin-left: 20px;
+  margin-left: 18px;
 }
 .card__fonctionnement--i {
   color: grey;
 }
 .card__restaurant {
   width: 100%;
+}
+@media (min-width: 769px) {
+  .card__restaurant {
+    width: 85%;
+  }
 }
 .card__title, .card__subtitle, .card--widget {
   margin: 0;
@@ -151,8 +158,8 @@ a {
 }
 
 /*Fonctionnement et restaurant*/
-.section {
-  margin: 30px 10px;
+.section--margin {
+  margin: 30px 10px 0 10px;
 }
 .section--size {
   display: -webkit-box;
@@ -182,10 +189,16 @@ a {
   }
 }
 
+.restaurant {
+  background-color: #f6f6f6;
+}
 .restaurant__link {
   width: 100%;
 }
 @media (min-width: 769px) {
+  .restaurant__link {
+    width: 50%;
+  }
   .restaurant--responsive {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -194,11 +207,11 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 40%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
   }
 }
 
