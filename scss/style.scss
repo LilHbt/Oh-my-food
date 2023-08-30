@@ -1,0 +1,56 @@
+/* variables*/ 
+    /*colors*/
+$main-background-color: #f6f6f6;
+$second-background-color: #EAEAEA;
+$third-background-color:#353535;
+$icon-color: #9356DC;
+$animation-color: #99E2D0;
+$animated-text-color:#008766;
+$alternative-text-color: white;
+$linear-gradient : linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    /*font*/
+$title-font: "Shrikhand" ,  sans-serif;
+$text-font: "Roboto", sans-serif;
+
+
+/*géneral*/
+*{
+    font-family: $text-font;
+}
+body{
+    max-width: 768px;
+    min-width: 320px;
+}
+.titre{
+    font-size: 24px;
+}
+
+.cta{
+    color: $alternative-text-color;
+    background: $linear-gradient;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+/*header*/
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    &__logo{
+        width: 50%;
+    }
+}
+
+/*localisation*/
+.localisation{
+    background-color: $second-background-color;
+    display: flex;
+    justify-content: center;
+    color: $third-background-color;
+}
+/*hero section*/
+.hero-section{
+    text-align: center;
+}
+
