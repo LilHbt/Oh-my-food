@@ -71,6 +71,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
+  max-height: 60px;
 }
 .card__fonctionnement--p {
   text-align: center;
@@ -93,7 +94,7 @@ a {
 }
 @media (min-width: 769px) {
   .card__restaurant {
-    width: 85%;
+    width: 100%;
   }
 }
 .card__title, .card__subtitle, .card--widget {
@@ -159,7 +160,7 @@ a {
 
 /*Fonctionnement et restaurant*/
 .section--margin {
-  margin: 30px 10px 0 10px;
+  margin: 50px 10px 0 10px;
 }
 .section--size {
   display: -webkit-box;
@@ -191,13 +192,14 @@ a {
 
 .restaurant {
   background-color: #f6f6f6;
+  padding-bottom: 30px;
 }
 .restaurant__link {
   width: 100%;
 }
 @media (min-width: 769px) {
   .restaurant__link {
-    width: 50%;
+    width: 45%;
   }
   .restaurant--responsive {
     display: -webkit-box;
@@ -209,9 +211,12 @@ a {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
