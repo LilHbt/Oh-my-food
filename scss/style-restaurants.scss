@@ -1,0 +1,150 @@
+/*VARIABLES*/
+    /*COLORS*/
+$main-background-color: #f6f6f6;
+$second-background-color: #EAEAEA;
+$third-background-color:#353535;
+$icon-color: #9356DC;
+$second-icon-color: grey;
+$animation-color: #99E2D0;
+$animated-text-color:#008766;
+$alternative-text-color: white;
+$linear-gradient : linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    /*FONT*/
+$title-font: "Shrikhand" ,  sans-serif;
+$text-font: "Roboto", sans-serif;
+
+/*GENERAL*/
+/*géneral*/
+
+body{
+    max-width: 768px;
+    min-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: $text-font;
+    @media (min-width:769px) {
+        max-width: 1440px;
+        
+    }
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.cta{
+    color: $alternative-text-color;
+    background: $linear-gradient;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px
+    
+}
+.placement-cta{
+    display: flex;
+    justify-content: center;
+}
+.card {
+    
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &__title, &__text,&__price{
+        margin: 0 10px 16px 10px;
+        padding-top: 10px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__price{
+        font-weight: bold;
+    }
+}
+
+
+/*Header*/
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px;
+    
+
+    &__logo{
+        width: 50%;
+        max-width: 300px;
+    }
+    &__link{
+        margin-right: auto;
+    }
+  
+}
+
+
+
+
+/*Banner*/
+.banner{
+    width: 100%;
+    object-fit: fill;
+    margin: 0;
+}
+
+/*TITRE*/
+.title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__h1{
+        font-family: $title-font;
+        font-size: 28px;
+        text-align: center;
+        margin: 20px 0 ;
+        
+    }
+    &__icon{
+        margin: 10px;
+    }
+}
+
+
+
+.main{
+    background-color: $main-background-color;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    bottom: 40px;
+}
+.menu{
+    margin: 0 15px 40px 15px;
+    padding-bottom: 30px;
+}
+/*footer*/
+.footer{
+    color: $alternative-text-color;
+    background-color: $third-background-color;
+    &--size{
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        @media (min-width:769px){
+            max-width: 1440px;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: end;
+            min-height: 100px;
+            
+        }
+    }
+    &--title{
+        font-family:  $title-font;
+        font-size: 18px;
+        margin: 5px;
+    }
+   &--link{
+        margin: 5px;
+    }    
+}

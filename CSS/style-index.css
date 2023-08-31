@@ -135,6 +135,7 @@ a {
 }
 .header__logo {
   width: 50%;
+  max-width: 300px;
 }
 
 /*localisation*/
