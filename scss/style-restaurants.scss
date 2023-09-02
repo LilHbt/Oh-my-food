@@ -37,12 +37,19 @@ a{
     border-radius: 25px;
     margin: 20px;
     padding: 20px;
-    border: 1px
+    border: 1px;
+    box-shadow: 3px 9px 11px -6px rgba(0,0,0,0.54);
     
 }
 .placement-cta{
     display: flex;
     justify-content: center;
+}
+.cta:hover{
+    box-shadow: 5px 10px 11px -5px rgba(0,0,0,0.75);
+    opacity: 0.9;
+
+
 }
 .card {
     
@@ -54,6 +61,11 @@ a{
     &__title, &__text,&__price{
         margin: 0 10px 16px 10px;
         padding-top: 10px;
+    }
+    &__title, &__text{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     &__content{
         display: flex;
@@ -68,14 +80,15 @@ a{
 /*Header*/
 .header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 24px;
-    
+    padding-top: 24px;
 
     &__logo{
         width: 50%;
         max-width: 300px;
+        margin-right: auto;
+        
     }
     &__link{
         margin-right: auto;
@@ -89,14 +102,18 @@ a{
 /*Banner*/
 .banner{
     width: 100%;
-    object-fit: fill;
+    max-height: 400px;
+    object-fit: cover;
     margin: 0;
+    position: relative;
+    top: 30px;
+    z-index: 1;
 }
 
 /*TITRE*/
 .title{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     &__h1{
         font-family: $title-font;
@@ -114,13 +131,22 @@ a{
 
 .main{
     background-color: $main-background-color;
+    background-size: cover;
     border-radius: 35px 35px 0 0;
     position: relative;
-    bottom: 40px;
+    z-index: 2;
+    
+    @media (min-width:769px) {
+        max-width: 1055px;
+        margin: 0 auto;
+    }
 }
 .menu{
-    margin: 0 15px 40px 15px;
+    margin: 0 15px 0 15px;
     padding-bottom: 30px;
+}
+.entree-plat-dessert{
+    text-decoration: underline 2px $animation-color;
 }
 /*footer*/
 .footer{
