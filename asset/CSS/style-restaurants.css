@@ -31,8 +31,16 @@ a {
   margin: 20px;
   padding: 20px;
   border: 1px;
+  cursor: pointer;
   -webkit-box-shadow: 3px 9px 11px -6px rgba(0, 0, 0, 0.54);
           box-shadow: 3px 9px 11px -6px rgba(0, 0, 0, 0.54);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.cta:hover {
+  -webkit-box-shadow: 5px 10px 11px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 10px 11px -5px rgba(0, 0, 0, 0.75);
+  opacity: 0.9;
 }
 
 .placement-cta {
@@ -42,12 +50,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.cta:hover {
-  -webkit-box-shadow: 5px 10px 11px -5px rgba(0, 0, 0, 0.75);
-          box-shadow: 5px 10px 11px -5px rgba(0, 0, 0, 0.75);
-  opacity: 0.9;
 }
 
 .card {
@@ -135,6 +137,7 @@ a {
   margin: 10px;
 }
 
+/*MENU*/
 .main {
   background-color: #f6f6f6;
   background-size: cover;
@@ -159,6 +162,50 @@ a {
           text-decoration: underline 2px #99E2D0;
 }
 
+/*ANIMATION MENU*/
+.delay-menu {
+  overflow: hidden;
+  -webkit-animation: menu 1.5s both ease-in-out;
+          animation: menu 1.5s both ease-in-out;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.delay-menu-2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.delay-menu-3 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+@-webkit-keyframes menu {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes menu {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+}
 /*footer*/
 .footer {
   color: white;
@@ -195,6 +242,6 @@ a {
   font-size: 18px;
   margin: 5px;
 }
-.footer--link {
+.footer--link, .footer--group {
   margin: 5px;
 }
