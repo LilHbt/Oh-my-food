@@ -55,16 +55,19 @@ a{
 }
 
 .card {
+    display: flex;
+    justify-content: center; 
     background-color: white;
     border-radius: 20px;
+    margin: 30px 10px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    margin-top: 30px;
-    margin-bottom: 30px;
+    
     &__title, &__text,&__price{
         margin: 0 10px 16px 10px;
         padding-top: 10px;
     }
     &__title, &__text{
+        text-align: start;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -74,8 +77,49 @@ a{
         justify-content: space-between;
     }
     &__price{
+        margin-left: auto;
         font-weight: bold;
+        
     }
+    &__no-anim{
+        width: 85%;
+    }
+    &__check-anim{
+        width: 15%;
+        margin-left: auto;
+        color: $alternative-text-color;
+        background-color: $animation-color;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transform: scaleX(0);
+        opacity: 0;
+        transform-origin: right;
+       
+    }
+}
+
+.btn-card{
+    width: 100%;
+    cursor: pointer;
+     margin-top: 30px; 
+    margin-bottom: 30px;
+  &:hover .card__check-anim{
+    transform: scaleX(1) ;
+    opacity: 1;
+  }
+  &:active .card__check-anim{
+    transform: scaleX(1) ;
+    opacity: 1;
+  }
+  
+}
+
+
+.card__check-anim{
+    transition: all 1s ease-in-out;
 }
 
 
