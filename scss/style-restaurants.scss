@@ -79,13 +79,17 @@ a{
     &__price{
         margin-left: auto;
         font-weight: bold;
-        
+        position: relative;
+        left: 15%;
+        transform: translateX(1);
+        transform-origin: right;
     }
     &__no-anim{
         width: 85%;
     }
     &__check-anim{
         width: 15%;
+        max-width: 100px;
         margin-left: auto;
         color: $alternative-text-color;
         background-color: $animation-color;
@@ -114,12 +118,18 @@ a{
     transform: scaleX(1) ;
     opacity: 1;
   }
+  &:hover .card__price{
+    transform: translateX(-100px);
+  }
   
 }
 
 
 .card__check-anim{
     transition: all 1s ease-in-out;
+}
+.card__price{
+    transition: transform 1s ease-in-out ;
 }
 
 

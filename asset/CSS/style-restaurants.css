@@ -86,12 +86,19 @@ a {
 .card__price {
   margin-left: auto;
   font-weight: bold;
+  position: relative;
+  left: 15%;
+  -webkit-transform: translateX(1);
+          transform: translateX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 .card__no-anim {
   width: 85%;
 }
 .card__check-anim {
   width: 15%;
+  max-width: 100px;
   margin-left: auto;
   color: white;
   background-color: #99E2D0;
@@ -129,10 +136,21 @@ a {
           transform: scaleX(1);
   opacity: 1;
 }
+.btn-card:hover .card__price {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
 
 .card__check-anim {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+.card__price {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 /*Header*/
