@@ -201,12 +201,69 @@ a {
 }
 .title__h1 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
+  font-size: 27px;
   text-align: center;
   margin: 20px 0;
 }
 .title__icon {
   margin: 10px;
+}
+
+.heart {
+  z-index: 2;
+  float: left;
+  margin: 10px;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
+  background: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  padding: 0; /*added code*/
+  outline: none; /*added code*/
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: "";
+  border-radius: 50%;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
+  background: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+}
+
+.heart:before {
+  bottom: 0px;
+  left: -5px;
+}
+
+.heart:after {
+  top: -5px;
+  right: 0px;
+}
+
+button.heart:active,
+button.heart:active:after,
+button.heart:active:before {
+  opacity: 1;
+}
+
+button.heart {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.like-icon {
+  position: relative;
+  z-index: 1;
+  right: 21px;
 }
 
 /*MENU*/

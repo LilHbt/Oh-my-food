@@ -70,17 +70,21 @@ a{
     display: flex;
     justify-content: center;
 }
-
+.size{
+    width: 95%;
+    @media  ( min-width:769px) {
+        width: 45%;
+        
+    }
+}
 .card {
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    margin-top: 30px;
-    margin-bottom: 30px;
     &__image {
         width: 100%;
         max-height: 230px;
-        border-radius: 25px 25px 0 0;
+        border-radius: 30px 30px 0 0;
         object-fit: cover;
       }
     &__fonctionnement{
@@ -137,6 +141,74 @@ a{
         padding: 10px;
     }
 
+  }
+  .heart {
+    position: relative;
+    left: 80%;
+    bottom: 50px;
+    z-index: 2;
+   
+    margin: 10px;
+    width: 11px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: $linear-gradient;
+    padding: 0;  /*added code*/
+    outline: none; /*added code*/
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transform-origin: bottom;
+  }
+  
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    content: '';
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background: $linear-gradient;
+    ;
+   
+    
+  }
+  
+  .heart:before {
+    bottom: 0px;
+    left: -5px;
+  }
+  
+  .heart:after {
+    top: -5px;
+    right: 0px;
+  }
+  button.heart:active,
+  button.heart:active:after,
+  button.heart:active:before {
+     opacity: 1;
+  
+
+  }
+  button.heart{
+    transition: all 1s;
+  }
+ 
+  .like-icon{
+    position: relative;
+    left: 81.3%;
+    bottom: 74px;
+    z-index: 1;
+    @media (min-width:450px) {
+        left: 80.6%;
+    }
   }
   
 /*header*/

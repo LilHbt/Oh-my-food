@@ -173,7 +173,7 @@ a{
     align-items: center;
     &__h1{
         font-family: $title-font;
-        font-size: 28px;
+        font-size: 27px;
         text-align: center;
         margin: 20px 0 ;
         
@@ -183,8 +183,67 @@ a{
        
     }
 }
+.heart {
+    z-index: 2;
+    float: left;
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: $linear-gradient;
+    padding: 0;  /*added code*/
+    outline: none; /*added code*/
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transform-origin: bottom;
+  }
+  
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    content: '';
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background: $linear-gradient;
+    ;
+   
+    
+  }
+  
+  .heart:before {
+    bottom: 0px;
+    left: -5px;
+  }
+  
+  .heart:after {
+    top: -5px;
+    right: 0px;
+  }
+  button.heart:active,
+  button.heart:active:after,
+  button.heart:active:before {
+     opacity: 1;
+  
 
-
+  }
+  button.heart{
+    transition: all 1s;
+  }
+ 
+  .like-icon{
+    position: relative;
+    z-index: 1;
+    right: 21px;
+  }
 /*MENU*/
 .main{
     background-color: $main-background-color;
