@@ -139,8 +139,20 @@ a {
   opacity: 1;
 }
 .btn-card:hover .card__price {
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+}
+@media (min-width: 400px) {
+  .btn-card:hover .card__price {
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
+}
+@media (min-width: 600px) {
+  .btn-card:hover .card__price {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
 }
 
 .card__check-anim {

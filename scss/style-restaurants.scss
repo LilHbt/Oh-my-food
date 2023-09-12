@@ -121,7 +121,13 @@ a{
     opacity: 1;
   }
   &:hover .card__price{
-    transform: translateX(-100px);
+    transform: translateX(-40px);
+    @media (min-width:400px) {
+        transform: translateX(-60px);
+    }
+    @media (min-width:600px) {
+        transform: translateX(-100px);
+    }
   }
   
 }
