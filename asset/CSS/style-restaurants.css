@@ -88,8 +88,8 @@ a {
   font-weight: bold;
   position: relative;
   left: 15%;
-  -webkit-transform: translateX(1);
-          transform: translateX(1);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
 }
