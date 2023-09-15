@@ -270,7 +270,12 @@ a{
     padding-bottom: 30px;
 }
 .entree-plat-dessert{
-    text-decoration: underline 2px $animation-color;
+    height: 3px;
+    width: 40px;
+    background-color: $animation-color;
+}
+h2{
+    margin-bottom: 12px;
 }
 
 /*ANIMATION MENU*/
